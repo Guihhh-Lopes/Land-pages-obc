@@ -35,6 +35,7 @@ header img{
 header nav{
     display:grid;
     grid-template-columns: 1fr 1fr;
+    margin: 1rem auto 0;
 }
 
 nav a{
@@ -201,4 +202,48 @@ footer nav a{
 }
 .text-center {
     text-align: center;
+}
+
+@media screen and (min-whidth: 40rem) {
+    header nav {
+        display: block;
+        text-align: center;
+    }
+    
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card:nth-child(2n){
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-whidth: 48rem) {
+    header div{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header img,
+    header nav,
+    header .button {
+        margin: 0;
+
+    }
+    
+}
+
+@media screen and (min-width: 72rem) {
+    .container{
+        display:flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .container .row-reverse{
+        flex-direction: row-reverse;
+    }
 }
